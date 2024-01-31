@@ -59,3 +59,27 @@ A demonstration file can be seen at [C3_W1_Lab_1_Keras_Tuner](hyperparameter-tun
 A demonstration file can be seen at [C3_W1_Lab_2_TFX_Tuner_and_Trainer](hyperparameter-tuning/C3_W1_Lab_2_TFX_Tuner_and_Trainer.ipynb).
 
 ## AutoML
+
+**Macro Architecture Search Space** is a search space where each layer is processed in order.
+
+**Micro Architecture Search Space** is a method where multiple layers are placed together.
+
+Some search strategies:
+- Grid search;
+- Random Search;
+- Bayesian Optimization;
+- Evolutionary methods;
+- [Reinforcement Learning](references/NEURAL%20ARCHITECTURE%20SEARCH%20WITH%20REINFORCEMENT%20LEARNING.pdf);
+- [Progressive NAS](references/PROGRESSIVE%20NEURAL%20ARCHITECTURE%20SEARCH.pdf)
+
+To reduce the cost of precision estimation in the entire sampling space, some methods can be adopted:
+- Lower Fidelity Estimates: uses small subsetes or low resolution samples to reduces computational costs in inference of candidates;
+- Learning Curve Extrapolation: based on a few iterations, extapolates the performance of candidates;
+- Weight Inheritance/Network Morphisms: initialize weights of new architectures based on previously trained architectures.
+
+## AutoML in the cloud
+
+Options:
+- Amazon SageMaker Autopilot;
+- Microsoft Azure Automated Machine Learning;
+- Google Cloud AutoML.
